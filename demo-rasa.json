@@ -1,0 +1,520 @@
+{
+  "rasa_nlu_data": {
+    "regex_features": [
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      },
+      {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+      },
+      {
+        "name": "stock_search_price",
+        "pattern": ".* price of (.*)"
+      },
+      {
+        "name": "stock_search_marketCap",
+        "pattern": ".* market capitalization of (.*)"
+      },
+      {
+        "name": "stock_search_marketCap",
+        "pattern": ".* marketCap of (.*)"
+      },
+      {
+        "name": "stock_search_avgTotalVolume",
+        "pattern": ".* average total volume of (.*)"
+      },
+      {
+        "name": "stock_search_avgTotalVolume",
+        "pattern": ".* trading volume of (.*)"
+      },
+      {
+        "name": "stock_search_price",
+        "pattern": ".* stock price (.*)"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "chinese",
+        "synonyms": ["Chinese", "Chines", "chines"]
+      },
+      {
+        "value": "vegetarian",
+        "synonyms": ["veggie", "vegg"]
+      },
+      {
+        "value": "hi",
+        "synonyms": ["expensive", "valued"]
+      },
+      {
+        "value": "AAPL",
+        "synonyms": ["Apple", "APPLE", "apple", "appl"]
+      },
+      {
+        "value": "TSLA",
+        "synonyms": ["Tesla", "tesla"]
+      },
+      {
+        "value": "FB",
+        "synonyms": ["facebook", "Facebook"]
+      },
+      {
+        "value": "GOOG",
+        "synonyms": ["google", "Google", "Alphabet", "alphabet"]
+      },
+      {
+        "value": "lo",
+        "synonyms": ["cheap"]
+      }
+    ],
+    "common_examples": [
+      {
+        "text": "hey", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "howdy", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hey there",
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hello", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hi", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "dear sir",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "yes", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yep", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yeah", 
+        "intent": "affirm", 
+        "entities": []
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "right, thank you",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "correct",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great choice",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sounds really good",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "trading volume",
+        "intent": "stock_search_avgTotalVolume",
+        "entities": []
+      },
+      {
+        "text": "average total volume",
+        "intent": "stock_search_avgTotalVolume",
+        "entities": []
+      },
+      {
+        "text": "stock price",
+        "intent": "stock_search_price",
+        "entities": []
+      },
+      {
+        "text": "market capitalization",
+        "intent": "stock_search_marketCap",
+        "entities": []
+      },
+      {
+        "text": "marketCap",
+        "intent": "stock_search_marketCap",
+        "entities": []
+      },
+      {
+        "text": "How about apple?",
+        "intent": "stock_search",
+        "entities":[
+          {
+            "start": 10,
+            "end": 15,
+            "value": "AAPL",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "How about tesla?",
+        "intent": "stock_search",
+        "entities":[
+          {
+            "start": 10,
+            "end": 15,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "How about google?",
+        "intent": "stock_search",
+        "entities":[
+          {
+            "start": 10,
+            "end": 16,
+            "value": "GOOG",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "How about facebook?",
+        "intent": "stock_search",
+        "entities":[
+          {
+            "start": 10,
+            "end": 18,
+            "value": "FB",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "apple",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "AAPL",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "google",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "GOOG",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "tesla",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "facebook",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "FB",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i'm looking for the price of google",
+        "intent": "stock_search_price",
+        "entities": [
+          {
+            "start": 29,
+            "end": 35,
+            "value": "GOOG",
+            "entity": "company"
+          }
+
+        ]
+      },
+      {
+        "text": "i'm looking for the market capitalization of google",
+        "intent": "stock_search_marketCap",
+        "entities": [
+          {
+            "start": 45,
+            "end": 51,
+            "value": "GOOG",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i'm looking for the trading volume of google",
+        "intent": "stock_search_avgTotalVolume",
+        "entities": [
+          {
+            "start": 38,
+            "end": 44,
+            "value": "GOOG",
+            "entity": "company"
+          }
+
+        ]
+      },
+      {
+        "text": "I want to know the latest stock price of apple",
+        "intent": "stock_search_price",
+        "entities": [
+          {
+            "start": 41,
+            "end": 46,
+            "value": "AAPL",
+            "entity": "company"
+          }
+
+        ]
+      },
+      {
+        "text": "I want to know the market capitalization of apple",
+        "intent": "stock_search_marketCap",
+        "entities": [
+          {
+            "start": 44,
+            "end": 49,
+            "value": "AAPL",
+            "entity": "company"
+          }
+
+        ]
+      },
+      {
+        "text": "I want to know the trading volume of apple",
+        "intent": "stock_search_avgTotalVolume",
+        "entities": [
+          {
+            "start": 37,
+            "end": 42,
+            "value": "AAPL",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "I am searching for the stock price of tesla",
+        "intent": "stock_search_price",
+        "entities": [
+          {
+            "start": 38,
+            "end": 43,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "I am searching for the trading volume of tesla",
+        "intent": "stock_search_avgTotalVolume",
+        "entities": [
+          {
+            "start": 41,
+            "end": 46,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "I am searching for the market capitalization of tesla",
+        "intent": "stock_search_marketCap",
+        "entities": [
+          {
+            "start": 48,
+            "end": 54,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i'm looking for the price of apple",
+        "intent": "stock_search_price",
+        "entities": [
+          {
+            "start": 29,
+            "end": 34,
+            "value": "AAPL",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i'm looking for the trading volume of apple",
+        "intent": "stock_search_avgTotalVolume",
+        "entities": [
+          {
+            "start": 38,
+            "end": 44,
+            "value": "AAPL",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i'm looking for the market capitalization of apple",
+        "intent": "stock_search_price",
+        "entities": [
+          {
+            "start": 45,
+            "end": 50,
+            "value": "AAPL",
+            "entity": "company"
+          }
+        ]
+      },            
+      {
+        "text": "show me the price of apple",
+        "intent": "stock_search_price",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "AAPL",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "show me the trading volume of apple",
+        "intent": "stock_search_avgTotalVolume",
+        "entities": [
+          {
+            "start": 30,
+            "end": 35,
+            "value": "AAPL",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "show me the market capitalization of apple",
+        "intent": "stock_search_marketCap",
+        "entities": [
+          {
+            "start": 37,
+            "end": 42,
+            "value": "AAPL",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "show me the trading volume of tesla",
+        "intent": "stock_search_avgTotalVolume",
+        "entities": [
+          {
+            "start": 30,
+            "end": 35,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "show me the market capitalization of tesla",
+        "intent": "stock_search_marketCap",
+        "entities": [
+          {
+            "start": 37,
+            "end": 42,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "show me the price of tesla",
+        "intent": "stock_search_price",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "search for stock price",
+        "intent": "stock_search_price",
+        "entities": []
+      },
+      {
+        "text": "I want a mid range hotel",
+        "intent": "",
+        "entities": []
+      }
+    ]
+  }
+}
