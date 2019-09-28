@@ -36,6 +36,8 @@
 * Open **telegram.ipynb** in jupyter notebook or pygram.
 * Or you could paste to a file and run as a normal python  script
 
+you should change the bot token in **telegram.ipynb**, and you can apply it at [here](https://iexcloud.io)
+
 #### possible issue
 Result of the telegram  internal proxy issue, this bot is dricetly base on HTTP request insteasd of API methods to receive user input. It use the *getUpdates*  interface which will receive all recent messages repeatedly (even if the bot have recieved these message). Therefore, when the interface accumulate a large number of data and sending to the script, it will lead the stack overflow. 
 
